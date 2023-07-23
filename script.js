@@ -1,11 +1,21 @@
-const wrap = document.querySelector('.wrap');
-const loginLink = document.querySelector('.login-register');
-const registerLink = document.querySelector('.register-link');
+const navlogin = document.getElementById("navlogin");
+const mydiv = document.getElementById("mydiv");
+const closebutton = document.getElementById("closebutton");
+closebutton.addEventListener("click", () => {
+    // Set the display style of the div to "block" to make it visible
+    mydiv.style.display = "none";
 
-register-link.addEventListener('click', ()=>{
-    wrap.classList.add('active');
-});
+// Add a click event listener to the button
+navlogin.addEventListener("click", () => {
+    // Check the current display style of the div
+    const divDisplayStyle = getComputedStyle(mydiv).display;
 
-login-register.addEventListener('click', ()=> {
-    wrap.classList.remove('active');
+    // Toggle the display style of the div
+    if (divDisplayStyle === "none") {
+        mydiv.style.display = "block";
+    } else {
+        mydiv.style.display = "block";
+    }
+ 
+    });
 });
